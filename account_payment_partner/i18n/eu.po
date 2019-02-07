@@ -1,0 +1,118 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_payment_partner
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-06 13:16+0000\n"
+"PO-Revision-Date: 2019-02-06 14:37+0100\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: eu\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#. module: account_payment_partner
+#: model:ir.ui.view,arch_db:account_payment_partner.report_invoice_payment_mode
+msgid "<strong>Bank Account:</strong>"
+msgstr "<strong>Banku-kontua:</strong>"
+
+#. module: account_payment_partner
+#: model:ir.ui.view,arch_db:account_payment_partner.report_invoice_payment_mode
+msgid "<strong>Payment Mode:</strong>"
+msgstr "<strong>Ordainketa modua:</strong>"
+
+#. module: account_payment_partner
+#: model:ir.model.fields,help:account_payment_partner.field_account_invoice_bank_account_required
+msgid "Activate this option if this payment method requires you to know the bank account number of your customer or supplier."
+msgstr "Activate this option if this payment method requires you to know the bank account number of your customer or supplier."
+
+#. module: account_payment_partner
+#: model:ir.model.fields,field_description:account_payment_partner.field_account_invoice_bank_account_required
+msgid "Bank Account Required"
+msgstr "Banku kontua beharrezkoa"
+
+#. module: account_payment_partner
+#: model:ir.model,name:account_payment_partner.model_res_partner
+msgid "Contact"
+msgstr "Kontaktua"
+
+#. module: account_payment_partner
+#: model:ir.model.fields,field_description:account_payment_partner.field_res_partner_customer_payment_mode_id
+#: model:ir.model.fields,field_description:account_payment_partner.field_res_users_customer_payment_mode_id
+msgid "Customer Payment Mode"
+msgstr "Bezeroaren ordainketa modua"
+
+#. module: account_payment_partner
+#: model:ir.model,name:account_payment_partner.model_account_invoice
+msgid "Invoice"
+msgstr "Faktura"
+
+#. module: account_payment_partner
+#: model:ir.model,name:account_payment_partner.model_account_move_line
+msgid "Journal Item"
+msgstr "Egunkariko elementua"
+
+#. module: account_payment_partner
+#: code:addons/account_payment_partner/tests/test_account_payment_partner.py:35
+#, python-format
+msgid "No Chart of Account Template has been defined !"
+msgstr "Kontu-txantiloia ez da zehaztu!"
+
+#. module: account_payment_partner
+#: model:ir.model.fields,field_description:account_payment_partner.field_account_invoice_payment_mode_id
+#: model:ir.model.fields,field_description:account_payment_partner.field_account_move_line_payment_mode_id
+#: model:ir.ui.view,arch_db:account_payment_partner.view_account_invoice_filter
+msgid "Payment Mode"
+msgstr "Ordainketa modua"
+
+#. module: account_payment_partner
+#: model:ir.model,name:account_payment_partner.model_account_payment_mode
+msgid "Payment Modes"
+msgstr "Ordainketa moduak"
+
+#. module: account_payment_partner
+#: model:ir.ui.view,arch_db:account_payment_partner.view_move_line_form
+msgid "Payments"
+msgstr "Ordainketak"
+
+#. module: account_payment_partner
+#: model:ir.model.fields,help:account_payment_partner.field_res_partner_customer_payment_mode_id
+#: model:ir.model.fields,help:account_payment_partner.field_res_users_customer_payment_mode_id
+msgid "Select the default payment mode for this customer."
+msgstr "Hautatu bezeroarentzako ordainketa modu lehenetsia."
+
+#. module: account_payment_partner
+#: model:ir.model.fields,help:account_payment_partner.field_res_partner_supplier_payment_mode_id
+#: model:ir.model.fields,help:account_payment_partner.field_res_users_supplier_payment_mode_id
+msgid "Select the default payment mode for this supplier."
+msgstr "Aukeratu hornitzaile honen ordainketa modu lehenetsia."
+
+#. module: account_payment_partner
+#: model:ir.model.fields,field_description:account_payment_partner.field_res_partner_supplier_payment_mode_id
+#: model:ir.model.fields,field_description:account_payment_partner.field_res_users_supplier_payment_mode_id
+msgid "Supplier Payment Mode"
+msgstr "Hornitzaileen ordainketa modua"
+
+#. module: account_payment_partner
+#: code:addons/account_payment_partner/models/account_invoice.py:119
+#, python-format
+msgid "The company of the invoice %s does not match with that of the payment mode"
+msgstr "%s  fakturaren konpainiak ordainketa moduarekin ez dator bat"
+
+#. module: account_payment_partner
+#: code:addons/account_payment_partner/models/account_payment_mode.py:17
+#, python-format
+msgid "You cannot change the Company. There exists at least one Invoice with this Payment Mode, already assigned to another Company."
+msgstr "Ezin duzu enpresa aldatu. Gutxienez faktura bat dago ordainketa modu honekin, dagoeneko beste enpresari esleituta."
+
+#. module: account_payment_partner
+#: code:addons/account_payment_partner/models/account_payment_mode.py:28
+#, python-format
+msgid "You cannot change the Company. There exists at least one Journal Item with this Payment Mode, already assigned to another Company."
+msgstr "Ezin duzu enpresa aldatu. Ordainketa modu honekin gutxienez aldizkariaren elementu bat dago, dagoeneko beste konpainia bati esleituta."
