@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-11-12 10:40+0000\n"
-"PO-Revision-Date: 2025-11-12 10:40+0000\n"
+"POT-Creation-Date: 2025-11-27 10:46+0000\n"
+"PO-Revision-Date: 2025-11-27 10:46+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -21,6 +21,8 @@ msgid ""
 "'Mandate-%s-%s' % (object.unique_mandate_reference, object.partner_id and "
 "object.partner_id.name.replace(' ', '_') or '')"
 msgstr ""
+"'Agindua-%s-%s' % (object.unique_mandate_reference, object.partner_id and "
+"object.partner_id.name.replace(' ', '_') or '')"
 
 #. module: account_banking_sepa_direct_debit
 #: model:mail.template,body_html:account_banking_sepa_direct_debit.email_template_sepa_mandate
@@ -42,91 +44,121 @@ msgid ""
 "</div>\n"
 "            "
 msgstr ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"        Kaixo:\n"
+"        <br><br>\n"
+"        <t t-out=\"object.company_id.name or ''\" contenteditable=\"false\" data-oe-t-inline=\"true\">YourCompany</t> enpresarako SEPA helbideratze-agindua sinatzeke dago.\n"
+"        <br><br>\n"
+"        Jarri gurekin harremanetan galderaren bat baduzu.\n"
+"        <br>\n"
+"\n"
+"    <t t-if=\"user.signature\">\n"
+"        <br>\n"
+"        <t t-out=\"user.signature or ''\">--<br>Mitchell-eko administratzailea</t>\n"
+"    </t>\n"
+"</t>\n"
+"</div>\n"
+"            "
 
 #. module: account_banking_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
 msgid "<em>Account Number - IBAN:</em>"
-msgstr ""
+msgstr "<em>Kontu-zenbakia - IBANa:</em>"
 
 #. module: account_banking_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
 msgid "<em>Address of the Debtor:</em>"
-msgstr ""
+msgstr "<em>Zordunaren helbidea:</em>"
 
 #. module: account_banking_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
 msgid "<em>Address:</em>"
-msgstr ""
+msgstr "<em>Helbidea:</em>"
 
 #. module: account_banking_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
 msgid "<em>Country of the debtor:</em>"
-msgstr ""
+msgstr "<em>Zordunaren herrialdea:</em>"
 
 #. module: account_banking_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
 msgid "<em>Country:</em>"
-msgstr ""
+msgstr "<em>Herrialdea:</em>"
 
 #. module: account_banking_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
 msgid "<em>Creditor's Name:</em>"
-msgstr ""
+msgstr "<em>Hartzekodunaren izena:</em>"
 
 #. module: account_banking_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
 msgid "<em>Date - Location:</em>"
-msgstr ""
+msgstr "<em>Data - Herria:</em>"
 
 #. module: account_banking_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
 msgid "<em>Debtor's Name:</em>"
-msgstr ""
+msgstr "<em>Zordunaren izena:</em>"
 
 #. module: account_banking_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
 msgid "<em>Identifier:</em>"
-msgstr ""
+msgstr "<em>Identifikatzailea:</em>"
 
 #. module: account_banking_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
 msgid "<em>Mandate Reference:</em>"
-msgstr ""
+msgstr "<em>Helbideratze-aginduaren erreferentzia:</em>"
 
 #. module: account_banking_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
 msgid "<em>Postal Code - City - Town:</em>"
-msgstr ""
+msgstr "<em>Posta-kodea - Herria - Probintzia:</em>"
 
 #. module: account_banking_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
 msgid "<em>Signature of the debtor:</em>"
-msgstr ""
+msgstr "<em>Zordunaren sinadura:</em>"
 
 #. module: account_banking_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
 msgid "<em>Swift BIC (up to 8 or 11 characteres):</em>"
-msgstr ""
+msgstr "<em>Swift BIC (8 edo 11 posizio izan ditzake):</em>"
 
 #. module: account_banking_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
 msgid "<em>Type of payment:</em>"
+msgstr "<em>Ordainketa mota:</em>"
+
+#. module: account_banking_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
+msgid ""
+"<span class=\"native_lang native_lang_small\">(Sepa Business-To-Business "
+"Direct debit Mandate)</span>"
+msgstr ""
+
+#. module: account_banking_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
+msgid ""
+"<span class=\"native_lang native_lang_small\">(Sepa Direct Debit "
+"Mandate)</span>"
 msgstr ""
 
 #. module: account_banking_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
 msgid "<strong>Sepa Business-To-Business Direct debit Mandate</strong>"
-msgstr ""
+msgstr "<strong>SEPA B2B zuzeneko zordunketa helbideratzeko agindua</strong>"
 
 #. module: account_banking_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
 msgid "<strong>Sepa Direct Debit Mandate</strong>"
-msgstr ""
+msgstr "<strong>SEPA zuzeneko zordunketa helbideratzeko agindua</strong>"
 
 #. module: account_banking_sepa_direct_debit
 #: model:ir.model,name:account_banking_sepa_direct_debit.model_account_banking_mandate
 msgid "A generic banking mandate"
-msgstr ""
+msgstr "Banku-mandatu generikoa"
 
 #. module: account_banking_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
@@ -134,6 +166,8 @@ msgid ""
 "ALL GAPS ARE MANDATORY. ONCE THIS MANDATE HAS BEEN SIGNED MUST BE SENT TO "
 "CREDITOR FOR STORAGE."
 msgstr ""
+"NAHITAEZ BETE BEHAR DIRA HUTSUNE GUZTIAK. HELBIDERATZE-AGINDUA SINATU "
+"ONDOREN, HARTZEKODUNARI BIDALI BEHAR ZAIO, GORDE DEZAN."
 
 #. module: account_banking_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
@@ -142,6 +176,9 @@ msgid ""
 "                        NEVERTHELESS, THE BANK OF DEBTOR REQUIRES DEBTOR’S AUTHORIZATION BEFORE DEBITING B2B DIRECT DEBITS IN THE ACCOUNT.\n"
 "                        THE DEBTOR WILL BE ABLE TO MANAGE THE MENTIONED AUTHORIZATION THROUGH THE MEANS PROVIDED BY HIS BANK."
 msgstr ""
+"NAHITAEZ BETE BEHAR DIRA HUTSUNE GUZTIAK. HELBIDERATZE-AGINDUA SINATU ONDOREN, HARTZEKODUNARI BIDALI BEHAR ZAIO, GORDE DEZAN.\n"
+"                        ZORDUNAREN BANKUAK HAREN BAIMENA BEHAR DU B2B ZORDUNKETA ZUZENAK KONTUAN ZORDUNDU BAINO LEHEN.\n"
+"                        BANKUAK ESKURA JARTZEN DITUEN BITARTEKOEZ BALIATUTA KUDEATU AHAL IZANGO DU ZORDUNAK BAIMEN HORI."
 
 #. module: account_banking_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
@@ -151,6 +188,10 @@ msgid ""
 "                        with your bank.\n"
 "                        A refund must be claimed within 8 weeks starting from the date on which your account was debited."
 msgstr ""
+"Bankuak dirua itzuli ahal izango dizu,\n"
+"                        bankuarekin sinatuta daukazun kontratuko baldintzen\n"
+"                        arabera.\n"
+"                        8 aste dituzu dirua itzul diezazuten eskatzeko, kontuan zordunketa egin den datatik hasita."
 
 #. module: account_banking_sepa_direct_debit
 #. odoo-python
@@ -160,6 +201,8 @@ msgid ""
 "As you changed the bank account attached to this mandate, the 'Sequence "
 "Type' has been set back to 'First'."
 msgstr ""
+"Helbideratze-agindu honekin erlazionatutako banku-kontua aldatu duzunez, "
+"“Sekuentzia mota” “Hasierakoa” bihurtu da."
 
 #. module: account_banking_sepa_direct_debit
 #. odoo-python
@@ -170,16 +213,19 @@ msgid ""
 "order <a href=# data-oe-model=account.payment.order data-oe-id=%d>{}</a> has"
 " been marked as uploaded."
 msgstr ""
+"<b>Lehenengoa</b> <b>Errepikaria</b> izatera pasatu da automatikoki, <a "
+"href=# data-oe-model=account.payment.order data-oe-id=%d>{}</a> zordunketa-"
+"agindua kargatutako gisa markatu denean."
 
 #. module: account_banking_sepa_direct_debit
 #: model:ir.model.fields.selection,name:account_banking_sepa_direct_debit.selection__account_banking_mandate__scheme__core
 msgid "Basic (CORE)"
-msgstr ""
+msgstr "Oinarrizkoa (CORE)"
 
 #. module: account_banking_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
 msgid "By signing this mandate form, you authorise (A)"
-msgstr ""
+msgstr "Helbideratze-agindu hau sinatzen baduzu, baimena emango duzu: (A)"
 
 #. module: account_banking_sepa_direct_debit
 #: model:ir.model,name:account_banking_sepa_direct_debit.model_res_company
@@ -194,7 +240,7 @@ msgstr "Konfigurazio-ezarpenak"
 #. module: account_banking_sepa_direct_debit
 #: model:ir.model.fields,field_description:account_banking_sepa_direct_debit.field_account_banking_mandate__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Bistaratu izena"
 
 #. module: account_banking_sepa_direct_debit
 #: model:ir.model,name:account_banking_sepa_direct_debit.model_mail_compose_message
@@ -211,6 +257,12 @@ msgid ""
 "- a 3-letters business code\n"
 "- a country-specific identifier"
 msgstr ""
+"Idatzi SEPA zuzeneko zordunketak egiteko zure enpresari egotzi zaion hartzekodun-identifikatzailea. Zehaztu ez bada, enpresaren SEPA hartzekodun-identifikatzailea erabiliko da.\n"
+"Honela dago osatuta identifikatzailea:\n"
+"- herrialdearen ISO kodea (2 letra)\n"
+"- kontrol-digituak (2 digitu)\n"
+"- jaulki duen erakundearen kodea (3 letra)\n"
+"- herrialdeko identifikatzaile espezifikoa (Espainian, IFZa)"
 
 #. module: account_banking_sepa_direct_debit
 #: model:ir.model.fields,help:account_banking_sepa_direct_debit.field_res_company__sepa_creditor_identifier
@@ -222,21 +274,27 @@ msgid ""
 "- a 3-letters business code\n"
 "- a country-specific identifier"
 msgstr ""
+"Idatzi SEPA zuzeneko zordunketak egiteko zure enpresari egotzi zaion hartzekodun-identifikatzailea.\n"
+"Honela dago osatuta identifikatzailea:\n"
+"- herrialdearen ISO kodea (2 digitu)\n"
+"- kontrol-digituak (2 letra)\n"
+"- jaulki duen erakundearen kodea (3 letra)\n"
+"- herrialdeko identifikatzaile espezifikoa (Espainian, IFZa)"
 
 #. module: account_banking_sepa_direct_debit
 #: model:ir.model.fields.selection,name:account_banking_sepa_direct_debit.selection__account_banking_mandate__scheme__b2b
 msgid "Enterprise (B2B)"
-msgstr ""
+msgstr "Enpresa (B2B)"
 
 #. module: account_banking_sepa_direct_debit
 #: model:ir.model.fields.selection,name:account_banking_sepa_direct_debit.selection__account_banking_mandate__recurrent_sequence_type__final
 msgid "Final"
-msgstr ""
+msgstr "Azkena"
 
 #. module: account_banking_sepa_direct_debit
 #: model:ir.model.fields.selection,name:account_banking_sepa_direct_debit.selection__account_banking_mandate__recurrent_sequence_type__first
 msgid "First"
-msgstr ""
+msgstr "Lehenengoa"
 
 #. module: account_banking_sepa_direct_debit
 #. odoo-python
@@ -244,16 +302,18 @@ msgstr ""
 #, python-format
 msgid "Invalid mandate type in '%s'. Valid ones are 'Recurrent' or 'One-Off'"
 msgstr ""
+"Mota horretako helbideratze-aginduak ez du balio (“%s”). Mota hauek balio "
+"dute: “Errepikakorra” edo “Bakarra”"
 
 #. module: account_banking_sepa_direct_debit
 #: model:ir.model.fields,field_description:account_banking_sepa_direct_debit.field_account_banking_mandate__is_sent
 msgid "Is Sent"
-msgstr ""
+msgstr "Bidalita dago"
 
 #. module: account_banking_sepa_direct_debit
 #: model:ir.model.fields,field_description:account_banking_sepa_direct_debit.field_account_banking_mandate__format
 msgid "Mandate Format"
-msgstr ""
+msgstr "Helbideratze-aginduaren formatua"
 
 #. module: account_banking_sepa_direct_debit
 #. odoo-python
@@ -261,13 +321,15 @@ msgstr ""
 #, python-format
 msgid "Mandate automatically set to expired after %d months without use."
 msgstr ""
+"Helbideratze-agindua iraungitako gisa ezartzen da automatikoki %d hilabetez "
+"erabiltzen ez bada."
 
 #. module: account_banking_sepa_direct_debit
 #. odoo-python
 #: code:addons/account_banking_sepa_direct_debit/models/account_banking_mandate.py:0
 #, python-format
 msgid "Mandate update"
-msgstr ""
+msgstr "Helbideratze-aginduaren eguneratzea"
 
 #. module: account_banking_sepa_direct_debit
 #. odoo-python
@@ -277,13 +339,15 @@ msgid ""
 "Missing SEPA Direct Debit mandate on the line with partner {partner_name} "
 "(reference {reference})."
 msgstr ""
+"SEPA zuzeneko zordunketa helbideratzeko agindua falta da {partner_name} "
+"bazkideari dagokion lerroan (erreferentzia: {reference})."
 
 #. module: account_banking_sepa_direct_debit
 #: model:ir.model.fields.selection,name:account_banking_sepa_direct_debit.selection__account_banking_mandate__type__oneoff
 #: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
 #: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.view_mandate_search
 msgid "One-Off"
-msgstr ""
+msgstr "Bakarra"
 
 #. module: account_banking_sepa_direct_debit
 #: model:ir.model.fields,field_description:account_banking_sepa_direct_debit.field_account_payment_method__pain_version
@@ -319,35 +383,38 @@ msgid ""
 "supported for SEPA Direct Debit are 'pain.008.001.02', 'pain.008.001.03' and"
 " 'pain.008.001.04'."
 msgstr ""
+"Ez da onartzen ordainketa motaren “%s” kodea. Ordainketa motaren kode hauek "
+"bakarrik onartzen dira SEPA zuzeneko zordunketetarako: “pain.008.001.02”, "
+"“pain.008.001.03” eta “pain.008.001.04”."
 
 #. module: account_banking_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.view_mandate_form
 msgid "Print"
-msgstr ""
+msgstr "Inprimatu"
 
 #. module: account_banking_sepa_direct_debit
 #: model:ir.model.fields.selection,name:account_banking_sepa_direct_debit.selection__account_banking_mandate__type__recurrent
 #: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
 #: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.view_mandate_search
 msgid "Recurrent"
-msgstr ""
+msgstr "Errepikakorra"
 
 #. module: account_banking_sepa_direct_debit
 #: model:ir.model.fields.selection,name:account_banking_sepa_direct_debit.selection__account_banking_mandate__recurrent_sequence_type__recurring
 msgid "Recurring"
-msgstr ""
+msgstr "Errepikaria"
 
 #. module: account_banking_sepa_direct_debit
 #: model:ir.model.fields,field_description:account_banking_sepa_direct_debit.field_account_payment_mode__sepa_creditor_identifier
 #: model:ir.model.fields,field_description:account_banking_sepa_direct_debit.field_res_company__sepa_creditor_identifier
 #: model:ir.model.fields,field_description:account_banking_sepa_direct_debit.field_res_config_settings__sepa_creditor_identifier
 msgid "SEPA Creditor Identifier"
-msgstr ""
+msgstr "SEPA hartzekodun-identifikatzailea"
 
 #. module: account_banking_sepa_direct_debit
 #: model:account.payment.method,name:account_banking_sepa_direct_debit.sepa_direct_debit
 msgid "SEPA Direct Debit for customers"
-msgstr ""
+msgstr "Bezeroentzako SEPA zuzeneko zordunketa"
 
 #. module: account_banking_sepa_direct_debit
 #: model:account.payment.mode,name:account_banking_sepa_direct_debit.payment_mode_inbound_sepa_dd1
@@ -357,7 +424,7 @@ msgstr ""
 #. module: account_banking_sepa_direct_debit
 #: model:ir.actions.report,name:account_banking_sepa_direct_debit.report_sepa_direct_debit_mandate
 msgid "SEPA Mandate"
-msgstr ""
+msgstr "SEPA helbideratze-agindua"
 
 #. module: account_banking_sepa_direct_debit
 #: model:mail.template,subject:account_banking_sepa_direct_debit.email_template_sepa_mandate
@@ -365,44 +432,48 @@ msgid ""
 "SEPA Mandate {{ object.unique_mandate_reference or 'n/a' }} for {{ "
 "object.company_id.name }} is pending to sign"
 msgstr ""
+"{{ object.company_id.name }} enpresarentzako {{ "
+"object.unique_mandate_reference or 'n/a' }} SEPA helbideratze-agindua "
+"sinatzeko dago"
 
 #. module: account_banking_sepa_direct_debit
 #: model:mail.template,name:account_banking_sepa_direct_debit.email_template_sepa_mandate
 msgid "SEPA Mandate: Send by email"
-msgstr ""
+msgstr "SEPA helbideratze-agindua: Bidali posta elektronikoz"
 
 #. module: account_banking_sepa_direct_debit
 #: model:ir.model.fields,field_description:account_banking_sepa_direct_debit.field_account_banking_mandate__scheme
 #: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.view_mandate_search
 msgid "Scheme"
-msgstr ""
+msgstr "Eskema"
 
 #. module: account_banking_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.view_mandate_form
 msgid "Send by Email"
-msgstr ""
+msgstr "Bidali posta elektronikoz"
 
 #. module: account_banking_sepa_direct_debit
 #: model:ir.model.fields.selection,name:account_banking_sepa_direct_debit.selection__account_banking_mandate__format__sepa
 msgid "Sepa Mandate"
-msgstr ""
+msgstr "SEPA helbideratze-agindua"
 
 #. module: account_banking_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.view_mandate_search
 #: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.view_mandate_tree
 msgid "Sequence Type"
-msgstr ""
+msgstr "Sekuentzia mota"
 
 #. module: account_banking_sepa_direct_debit
 #: model:ir.model.fields,field_description:account_banking_sepa_direct_debit.field_account_banking_mandate__recurrent_sequence_type
 msgid "Sequence Type for Next Debit"
-msgstr ""
+msgstr "Hurrengo zordunketarako sekuentzia mota"
 
 #. module: account_banking_sepa_direct_debit
 #: model:ir.actions.server,name:account_banking_sepa_direct_debit.sdd_mandate_expire_cron_ir_actions_server
 #: model:ir.cron,cron_name:account_banking_sepa_direct_debit.sdd_mandate_expire_cron
 msgid "Set SEPA Direct Debit Mandates to Expired"
 msgstr ""
+"Ezarri SEPA zuzeneko zordunketak helbideratzeko aginduak iraungitako gisa"
 
 #. module: account_banking_sepa_direct_debit
 #. odoo-python
@@ -410,7 +481,7 @@ msgstr ""
 #: code:addons/account_banking_sepa_direct_debit/models/res_company.py:0
 #, python-format
 msgid "The SEPA Creditor Identifier '%s' is invalid."
-msgstr ""
+msgstr "Ez du balio “%s” SEPA hartzekodun-identifikatzaileak."
 
 #. module: account_banking_sepa_direct_debit
 #. odoo-python
@@ -420,6 +491,8 @@ msgid ""
 "The SEPA Direct Debit mandate with reference {mandate_ref} for partner "
 "{partner_name} has expired."
 msgstr ""
+"{mandate_ref} erreferentzia duen eta {partner_name} bazkideari dagokion "
+"zuzeneko zordunketa helbideratzeko agindua iraungi egin da."
 
 #. module: account_banking_sepa_direct_debit
 #. odoo-python
@@ -430,6 +503,9 @@ msgid ""
 "{partner_name} has type set to 'One-Off' but has a last debit date set to "
 "{last_debit_date}. Therefore, it cannot be used."
 msgstr ""
+"{mandate_ref} erreferentzia duen eta {partner_name} bazkideari dagokion SEPA"
+" zuzeneko zordunketa helbideratzeko agindua “Bakarra” motakoa da, azken "
+"zordunketa-data {last_debit_date} baitu; hortaz, ezin da erabili."
 
 #. module: account_banking_sepa_direct_debit
 #. odoo-python
@@ -437,12 +513,15 @@ msgstr ""
 #, python-format
 msgid "The recurrent mandate '%s' must have a sequence type."
 msgstr ""
+"“%s” helbideratze-agindu errepikakorrak sekuentzia mota bat eduki behar du."
 
 #. module: account_banking_sepa_direct_debit
 #: model:ir.model.fields,help:account_banking_sepa_direct_debit.field_account_banking_mandate__recurrent_sequence_type
 msgid ""
 "This field is only used for Recurrent mandates, not for One-Off mandates."
 msgstr ""
+"Helbideratze-agindu errepikakorretarako soilik erabiltzen da eremu hau, ez "
+"bakarretarako."
 
 #. module: account_banking_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
@@ -452,41 +531,45 @@ msgid ""
 "                        been debited, but you are entitled to request your bank\n"
 "                        not to debit your account up until the day on which the payment is due."
 msgstr ""
+"Enpresen arteko eragiketetarako soilik da helbideratze-agindu hau.\n"
+"                        Bankuak ezin izango dizu dirua itzuli behin kontuan\n"
+"                        zordunketa eginez gero, baina bankuari eska diezaiokezu\n"
+"                        kontuan zordunketarik ez egiteko ordainketa egin behar den egunera arte."
 
 #. module: account_banking_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
 msgid "To be completed by the creditor"
-msgstr ""
+msgstr "Hartzekodunak bete beharrekoa"
 
 #. module: account_banking_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
 msgid "To be completed by the debtor"
-msgstr ""
+msgstr "Zordunak bete beharrekoa"
 
 #. module: account_banking_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.view_mandate_search
 msgid "Type"
-msgstr ""
+msgstr "Mota"
 
 #. module: account_banking_sepa_direct_debit
 #: model:ir.model.fields,field_description:account_banking_sepa_direct_debit.field_account_banking_mandate__type
 msgid "Type of Mandate"
-msgstr ""
+msgstr "Helbideratze-aginduaren mota"
 
 #. module: account_banking_sepa_direct_debit
 #: model:ir.model.fields,field_description:account_banking_sepa_direct_debit.field_account_banking_mandate__unique_mandate_reference
 msgid "Unique Mandate Reference"
-msgstr ""
+msgstr "Helbideratze-aginduaren erreferentzia bakarra"
 
 #. module: account_banking_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.res_config_settings_view_form
 msgid "Write the ICS of your company"
-msgstr ""
+msgstr "Idatzi enpresaren SEPA hartzekodun-identifikatzailea"
 
 #. module: account_banking_sepa_direct_debit
 #: model:ir.model.fields.selection,name:account_banking_sepa_direct_debit.selection__account_payment_method__pain_version__pain_008_001_02
 msgid "pain.008.001.02 (recommended for direct debit)"
-msgstr ""
+msgstr "pain.008.001.02 (zuzeneko zordunketetarako gomendatua)"
 
 #. module: account_banking_sepa_direct_debit
 #: model:ir.model.fields.selection,name:account_banking_sepa_direct_debit.selection__account_payment_method__pain_version__pain_008_001_03
@@ -501,7 +584,7 @@ msgstr ""
 #. module: account_banking_sepa_direct_debit
 #: model:ir.model.fields.selection,name:account_banking_sepa_direct_debit.selection__account_payment_method__pain_version__pain_008_003_02
 msgid "pain.008.003.02 (direct debit in Germany)"
-msgstr ""
+msgstr "pain.008.003.02 (Alemaniako zuzeneko zordunketa)"
 
 #. module: account_banking_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_banking_sepa_direct_debit.sepa_direct_debit_mandate_document
@@ -509,6 +592,8 @@ msgid ""
 "to send instructions to your bank to debit your account and (B) your bank to\n"
 "                       debit your account in accordance with the instructions from"
 msgstr ""
+"bankuari argibideak bidaltzeko, kontuan zordunketa egin ditzan; eta (B) bankuak \n"
+"                       kontuan zordunketa egiteko, hartzekodunaren argibideei jarraikiz"
 
 #. module: account_banking_sepa_direct_debit
 #: model:mail.template,report_name:account_banking_sepa_direct_debit.email_template_sepa_mandate
