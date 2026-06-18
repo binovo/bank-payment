@@ -146,7 +146,7 @@ msgstr ""
 #: code:addons/account_banking_mandate/models/account_banking_mandate.py:0
 #, python-format
 msgid "Cannot validate the mandate '%s' without a date of signature."
-msgstr "Ezin da baliozkotu "%s" mandatua sinaduraren datarik gabe."
+msgstr "Ezin da baliozkotu '%s' mandatua sinaduraren datarik gabe."
 
 #. module: account_banking_mandate
 #: model_terms:ir.actions.act_window,help:account_banking_mandate.mandate_action
@@ -337,7 +337,7 @@ msgstr "Agindua behar da"
 #: code:addons/account_banking_mandate/models/account_banking_mandate.py:0
 #, python-format
 msgid "Mandate should be in cancel state."
-msgstr "Helbideratze-aginduak "Bertan behera utzita" egoeran egon behar du."
+msgstr "Helbideratze-aginduak 'Bertan behera utzita' egoeran egon behar du."
 
 #. module: account_banking_mandate
 #. odoo-python
@@ -532,7 +532,7 @@ msgstr ""
 #: code:addons/account_banking_mandate/models/account_banking_mandate.py:0
 #, python-format
 msgid "The date of signature of mandate '%s' is in the future!"
-msgstr ""%s" mandatuaren sinaduraren data etorkizunekoa da!"
+msgstr "'%s' mandatuaren sinaduraren data etorkizunekoa da!"
 
 #. module: account_banking_mandate
 #. odoo-python
